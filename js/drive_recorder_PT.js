@@ -1,10 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() {
 	var player = document.getElementById("player");
 	var canvas = document.getElementById("canvas");
-	canvas.width = player.clientWidth;
-	canvas.height = player.clientHeight * 2.5;
-	/*なぜかmacだと縦は1.5倍しないとうまく行かない*/
-	/*iphoneだと1.5倍してもダメ*/
 	var recButton = document.getElementById("rec_bt");
 
 	var handleSuccess = function(stream) {
@@ -16,6 +12,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	recButton.addEventListener("click", function(){
 		var context = canvas.getContext("2d");
+		canvas.width = player.clientWidth;
+		canvas.height = player.clientHeight;
+		/*ここでcanvasのサイズを決めないと、縦がおかしくなる。*/
+		/*おそらく、読み込みや定義のタイミングの問題*/
 		context.drawImage(player, 0, 0, canvas.width, canvas.height);
 	});
 
