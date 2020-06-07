@@ -2,8 +2,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	var player = document.getElementById("player");
 	var canvas = document.getElementById("canvas");
 	canvas.width = player.clientWidth;
-	canvas.height = player.clientHeight * 1.5;
-	/*なぜか縦は1.5倍しないとうまく行かない*/
+	canvas.height = player.clientHeight * 2.5;
+	/*なぜかmacだと縦は1.5倍しないとうまく行かない*/
+	/*iphoneだと1.5倍してもダメ*/
 	var recButton = document.getElementById("rec_bt");
 
 	var handleSuccess = function(stream) {
