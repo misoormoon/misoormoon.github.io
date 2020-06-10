@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	    }, 1000/30);
 	    canvasStream = canvas.captureStream();
 	    console.log(canvasStream);
-		
+	    alert(canvasStream);
 	    makeRecorder(canvasStream);/*引数はstreamでもいい*/
 	    recorder.ondataavailable = function(e) {
 		chunks.push(e.data);
