@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	    }, 1000/30);
 	    canvasStream = canvas.captureStream();
 	    console.log(canvasStream);
+		
 	    makeRecorder(canvasStream);/*引数はstreamでもいい*/
 	    recorder.ondataavailable = function(e) {
 		chunks.push(e.data);
@@ -57,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	stpButton.addEventListener("click", function() {
 		recorder.stop();
-		makeRecorder(player.srcObject);
+		makeRecorder(canvasStream);
 		recorder.ondataavailable = function(e) {
 		    chunks.push(e.data);
 		    makeBlobUrl();
