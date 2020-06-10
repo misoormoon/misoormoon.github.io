@@ -55,6 +55,6 @@ window.addEventListener("DOMContentLoaded", function() {
 	});
 
 	navigator.mediaDevices
-	    .getUserMedia({video: {facingMode: "environment"}, audio: false})
+	    .getUserMedia({video: {aspectRatio: 9/16, facingMode: "environment"}, audio: false})
 	    .then(accessCameraSuccess, accessCameraFailure);
 });
