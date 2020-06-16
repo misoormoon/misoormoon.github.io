@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	var recButton = document.getElementById("rec_bt");
 	var acdButton = document.getElementById("acd_bt");
 	var anchors = document.getElementsByClassName("download_link");
+	var se = document.getElementById("se");
 
 	var recorder;
 	var chunks = [];
@@ -112,6 +113,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	acdButton.addEventListener("click", function() {
 		accident = "happend";
 		acdButton.disabled = true;
+		se.play();
 	});
 
 	navigator.mediaDevices
@@ -149,7 +151,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	       e.acceleration.z > 10) {
 		accident = "happend";
 		acdButton.disabled = true;
-		
+		se.play();
 	    }
 	}
 
