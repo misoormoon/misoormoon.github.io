@@ -144,9 +144,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
 
 	function accidentHappend(e) {
-	    if(e.acceleration.x > 5 ||
-	       e.acceleration.y > 5 ||
-	       e.acceleration.z > 5) {
+	    if(e.acceleration.x > 10 ||
+	       e.acceleration.y > 10 ||
+	       e.acceleration.z > 10) {
 		accident = "happend";
 		acdButton.disabled = true;
 		
