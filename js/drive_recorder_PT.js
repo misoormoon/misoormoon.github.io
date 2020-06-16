@@ -131,8 +131,10 @@ window.addEventListener("DOMContentLoaded", function() {
 	function accessMotionSensorSuccess(response) {
 	    if(response === "granted") {
 		window.addEventListener("devicemotion", function(e){
-			alert(e.acceleration);/*確認用*/
-			alert(e.interval);/*確認用*/
+			console.log(e.acceleration.x);/*確認用*/
+			console.log(e.acceleration.y);/*確認用*/
+			console.log(e.acceleration.z);/*確認用*/
+			console.log(e.interval);/*確認用*/
 			accidentHappend(e);
 		})
 	    }
