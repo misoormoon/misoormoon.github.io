@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() {
 	var player = document.getElementById("player");
+	var mtnButton = document.getElementById("mtn_bt");
 	var recButton = document.getElementById("rec_bt");
 	var acdButton = document.getElementById("acd_bt");
 	var anchors = document.getElementsByClassName("download_link");
@@ -117,12 +118,14 @@ window.addEventListener("DOMContentLoaded", function() {
 	    .getUserMedia({video: {facingMode: "environment"}, audio: false})
 	    .then(accessCameraSuccess, accessCameraFailure);
 
-	if(!DeviceMotionEvent){
-	    alert("加速度センサーへのアクセスができません。safariの設定を変更するか、事故発生時に手動でaccidentボタンを押して録画処理をしてください。")
-	}
-	if(typeof DeviceMotionEvent.requestPermission === "function"){
-	    DeviceMotionEvent.requestPermission()
-		.then(accessMotionSensorSuccess)
+	function accessMotionSensor() {
+	    if(!DeviceMotionEvent){
+		alert("加速度センサーへのアクセスができません。safariの設定を変更するか、事故発生時に手動でaccidentボタンを押して録画処理をしてください。")
+	    }
+	    if(typeof DeviceMotionEvent.requestPermission === "function"){
+		DeviceMotionEvent.requestPermission()
+		    .then(accessMotionSensorSuccess);
+	    }
 	}
 
 	function accessMotionSensorSuccess(response) {
@@ -147,4 +150,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 	    }
 	}
+
+	mtnButton.addEventListener("click", accessMotionSensor)
 });
