@@ -1,10 +1,11 @@
 window.addEventListener("DOMContentLoaded", function() {
 	var player = document.getElementById("player");
-	var mtnButton = document.getElementById("mtn_bt");
+	var permButton = document.getElementById("perm_bt");
 	var recButton = document.getElementById("rec_bt");
 	var acdButton = document.getElementById("acd_bt");
 	var anchors = document.getElementsByClassName("download_link");
-	var se = document.getElementById("se");
+	var permSe = document.getElementById("perm_se");
+	var acdSe = document.getElementById("acd_se");
 
 	var recorder;
 	var chunks = [];
@@ -113,7 +114,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	acdButton.addEventListener("click", function() {
 		accident = "happend";
 		acdButton.disabled = true;
-		se.play();
+		acdSe.play();
 	});
 
 	navigator.mediaDevices
@@ -151,9 +152,14 @@ window.addEventListener("DOMContentLoaded", function() {
 	       e.acceleration.z > 10) {
 		accident = "happend";
 		acdButton.disabled = true;
-		se.play();
+		acdSe.play();
 	    }
 	}
 
-	mtnButton.addEventListener("click", accessMotionSensor)
+	function accessAudio() {
+	    permSe.play();
+	}
+
+	permButton.addEventListener("click", accessMotionSensor);
+	permButton.addEventListener("click", accessAudio);
 });
