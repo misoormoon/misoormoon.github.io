@@ -7,15 +7,16 @@
     <title>ドライブレコーダー</title>
   </head>
   <body>
-    <p>ドライブレコーダー</p>
+    <p id="app_name">ドライブレコーダー</p>
     <video id="player" controls autoplay playsinline></video>
-    <button id="mtn_bt" type="button">motion sensor : ON</button>
+    <button id="perm_bt" type="button">motion sensor : ON</button>
     <button id="rec_bt" type="button">record</button>
     <button id="acd_bt" type="button">accident</button>
     <a class="download_link" href="#" style="display:none">事故前映像</a>
     <a class="download_link" href="#" style="display:none">事故中映像</a>
     <a class="download_link" href="#" style="display:none">事故後映像</a>
-    <audio id="se" src="audio/warning2.mp3">
+    <audio id="perm_se" src="audio/decision6.mp3">
+    <audio id="acd_se" src="audio/warning2.mp3">
 <!--    <canvas id="canvas"></canvas>-->
   </body>
 </html>
