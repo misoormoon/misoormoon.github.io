@@ -7,7 +7,7 @@
 #video_wrapper
 {
 	position:relative;
-	left:5%;
+	left:2%;
 	width: 50%;
 }
 #player
@@ -25,6 +25,6 @@
 {
 	font-size: 4vh;
 	width: 100%;
-	margin: 4vh 0px;
+	margin: 4vh 0.5vh;
 	padding: 5vh 0px;
 }
