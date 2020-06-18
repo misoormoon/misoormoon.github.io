@@ -18,13 +18,13 @@
 .btn_wrapper
 {
 	position:relative;
-	left:50%;
+	left:55%;
 	width: 45%;
 }
 .btn
 {
 	font-size: 4vh;
-	width: 90%;
+	width: 100%;
 	margin: 4vh;
 	padding: 5vh;
 }
