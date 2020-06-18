@@ -2,7 +2,7 @@
 {
 	position: relative;
 	text-align: center;
-	font-size: 7vw;
+	font-size: 7vh;
 }
 #video_wrapper
 {
@@ -22,8 +22,8 @@
 }
 .btn
 {
-	font-size: 5vw;
+	font-size: 5vh;
 	width: 100%;
-	margin: 5vw;
-	padding: 4vw;
+	margin: 4vh;
+	padding: 5vh;
 }
