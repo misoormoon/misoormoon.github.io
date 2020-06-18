@@ -160,6 +160,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	    permSe.play();
 	}
 
-	permButton.addEventListener("click", accessMotionSensor);
+	permButton.addEventListener("click", function() {
+		accessMotionSensor();
+		permButton.disabled = true;
+	    });
 	permButton.addEventListener("click", accessAudio);
 });
