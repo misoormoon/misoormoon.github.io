@@ -34,3 +34,8 @@
 	margin: 2vh;
 	text-align: center;
 }
+#audio_link
+{
+	text-align: right;
+	font-size: 2vh;
+}
