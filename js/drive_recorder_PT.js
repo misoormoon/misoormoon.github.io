@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	var acdButton = document.getElementById("acd_bt");
 	var anchors = document.getElementsByClassName("download_link");
 	var permSe = document.getElementById("perm_se");
+	var recSe = document.getElementById("rec_se");
 	var acdSe = document.getElementById("acd_se");
 
 	var recorder;
@@ -75,6 +76,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	recButton.addEventListener("click", function(){
 		startRecording();
 		recButton.disabled = true;
+		recSe.play();
 	    });
 
 	function startRecording() {
